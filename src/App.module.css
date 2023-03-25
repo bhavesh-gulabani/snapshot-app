@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+header {
+  text-align: center;
+  font-family: 'Lobster';
+}
+
+header h1 {
+  color: var(--color-primary);
+  margin: 1.5rem;
+  font-size: 3.5rem;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  text-align: center;
+  padding: 2em;
+}
+
+@media screen and (max-width: 300px) {
+  header h1 {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 200px) {
+  header h1 {
+    font-size: 1.75rem;
+  }
+}

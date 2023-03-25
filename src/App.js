@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import './App.module.css';
+import { SearchBar, NavBar, ImageGallery } from './components';
 
-function App() {
+const App = () => {
+  const [selectedCategory, setSelectedCategory] = useState('mountains');
+
+  const categoryUpdateHandler = (newCategory) => {
+    setSelectedCategory(newCategory);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <h1>SnapShot</h1>
       </header>
-    </div>
+
+      <nav>
+        <SearchBar onSearch={categoryUpdateHandler} />
+        <NavBar onCategoryUpdate={categoryUpdateHandler} />
+      </nav>
+
+      <main>
+        <ImageGallery category={selectedCategory} />
+      </main>
+
+      <footer>
+        <p>Copyright &#169; 2023 SnapShot. All Rights Reserved.</p>
+      </footer>
+    </>
   );
-}
+};
 
 export default App;

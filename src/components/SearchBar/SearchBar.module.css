@@ -1,0 +1,23 @@
+.search-container {
+  width: 30%;
+  padding-top: 1em;
+  padding-bottom: 2em;
+}
+
+@media screen and (max-width: 900px) {
+  .search-container {
+    width: 270px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .search-container {
+    width: 220px;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .search-container {
+    width: 150px;
+  }
+}

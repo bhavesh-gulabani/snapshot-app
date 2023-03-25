@@ -1,0 +1,38 @@
+.nav-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.nav-container button {
+  all: unset;
+  cursor: pointer;
+  text-align: center;
+  width: 8em;
+  padding: 12px;
+  margin: 16px;
+  text-transform: capitalize;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  border-radius: 5px;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+.nav-container button:hover {
+  background-color: #134077;
+  font-weight: 450;
+}
+
+@media screen and (max-width: 950px) {
+  .nav-container button {
+    width: 7.5em;
+    margin: 12px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .nav-container button {
+    width: 6.5em;
+  }
+}
